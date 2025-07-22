@@ -59,7 +59,7 @@ This shows how data flows within the app from gesture input to security response
 
 ###  Data Pipeline Diagram
 
-![Data Pipeline](./assets/data_pipeline.png)
+![Data Pipeline](./assets/CanraSyncAI_Data_Pipeline.png)
 > *Data flows: User Gesture → Data Logger → AsyncStorage → TFLite Model → Anomaly Detection → Reauthentication Trigger*
 
 ---
