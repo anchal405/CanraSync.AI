@@ -89,7 +89,7 @@ This shows how data flows within the app from gesture input to security response
 ##  Installation
 
 ```bash
-git clone https://github.com/ShantiKumariGautam/CanaraSync.AI.git
+git clone https://github.com/anchal405/CanraSync.AI.git
 cd CanaraSync.AI
 npm install
 npm install -g expo-cli # if not already installed
