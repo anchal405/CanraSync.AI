@@ -1,6 +1,9 @@
 # CanaraSync.AI   
 **Security that Syncs with Your Every Move**  
 Team Cyber Siren | SuRaksha Cyber Hackathon 2025  
+<p align="center">
+  <img src="./assets/placeholder.png" alt="CanaraSync.AI Logo" width="200"/>
+</p>
 
 CanaraSync.AI is an AI-powered mobile app that enhances mobile banking security using behavioral biometrics and on-device TinyML. It learns your gestures—tap, scroll, typing rhythm—to detect anomalies and silently protect your sessions.
 
