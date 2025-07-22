@@ -1,50 +1,94 @@
-# Welcome to your Expo app 👋
+# CanaraSync.AI   
+**Security that Syncs with Your Every Move**  
+Team Cyber Siren | SuRaksha Cyber Hackathon 2025  
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+CanaraSync.AI is an AI-powered mobile app that enhances mobile banking security using behavioral biometrics and on-device TinyML. It learns your gestures—tap, scroll, typing rhythm—to detect anomalies and silently protect your sessions.
 
-## Get started
+---
 
-1. Install dependencies
+##  Key Features
 
-   ```bash
-   npm install
-   ```
+- **Behavioral Biometrics**: Learns user patterns across 6 sessions; flags anomalies from the 7th.
+- **Gesture + Geo Intelligence**: Monitors touch behavior and location context.
+- **Offline-First**: Operates even in rural or low-connectivity areas.
+- **On-Device TinyML**: Runs AI locally using TensorFlow Lite for privacy.
+- **Silent Reauthentication**: Detects suspicious activity without disrupting the user.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+##  Privacy & Compliance
 
-In the output, you'll find options to open the app in a
+- Complies with **DPDP Act 2023 (India)** & **GDPR**
+- No cloud storage — all data stays local via AsyncStorage
+- Data auto-deletes upon uninstall
+- Consent-first usage, no background tracking
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+##  Tech Stack
 
-## Get a fresh project
+| Layer        | Technology                          |
+|--------------|--------------------------------------|
+| Frontend     | React Native (Expo), TypeScript      |
+| AI/ML        | TensorFlow Lite, Custom Autoencoder  |
+| Storage      | AsyncStorage, Expo-Location          |
+| Testing      | Jest, RN Testing Library, Expo Go    |
 
-When you're ready, run:
+---
+
+##  High-Level Architecture
+
+The app follows a modular, offline-first architecture:
+
+- UI Layer (React Native)
+- Gesture Capture Layer (Tap, Scroll, Typing)
+- Local Storage (AsyncStorage)
+- TinyML Engine (Anomaly Detection)
+- Security Layer (Reauth trigger, session control)
+
+###  High-Level Architecture Diagram
+
+![High-Level Architecture](./assets/high_level_architecture.png)
+> *Diagram showing modular structure: UI ↔ Gesture Logger ↔ AsyncStorage ↔ TFLite Inference Engine*
+
+---
+
+##  Behavioral Data Pipeline
+
+This shows how data flows within the app from gesture input to security response.
+
+###  Data Pipeline Diagram
+
+![Data Pipeline](./assets/data_pipeline.png)
+> *Data flows: User Gesture → Data Logger → AsyncStorage → TFLite Model → Anomaly Detection → Reauthentication Trigger*
+
+---
+
+##  App Architecture Highlights
+
+- Modular directory: `/screens`, `/hooks`, `/utils`, `/ml_model`
+- Centralized gesture logger and AsyncStorage data store
+- ML model inference happens on-device after 6 sessions of training
+- All collected data is JSON-formatted and encrypted locally
+
+---
+
+##  Future Scope
+
+-  Duress gestures for silent SOS
+-  Federated Learning (future privacy-preserving updates)
+-  Multi-user support on shared devices
+-  Admin dashboard with anomaly heatmaps
+-  SDKs for easy fintech integration
+
+---
+
+##  Installation
 
 ```bash
-npm run reset-project
-```
+git clone https://github.com/ShantiKumariGautam/CanaraSync.AI.git
+cd CanaraSync.AI
+npm install
+npm install -g expo-cli # if not already installed
+npx expo start
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
