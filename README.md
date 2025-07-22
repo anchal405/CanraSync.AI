@@ -48,7 +48,7 @@ The app follows a modular, offline-first architecture:
 
 ###  High-Level Architecture Diagram
 
-![High-Level Architecture](./assets/high_level_architecture.png)
+![High-Level Architecture](./assets/CanaraSyncAI_HLD.png)
 > *Diagram showing modular structure: UI ↔ Gesture Logger ↔ AsyncStorage ↔ TFLite Inference Engine*
 
 ---
